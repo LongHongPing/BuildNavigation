@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/xidian_al.css">
+    <script src="../scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Ws2Emitc5glP21nc2h3D5nh1R4U7Z7cp"></script>
+    <title>西电AL</title>
+</head>
+<body>
+
+    <div id="mous" style="float: left;font-size: 15px"><input id="mouse" type="checkbox" name="searchStart" onclick="mouseSearch()">鼠标点击</div>
+    <input id="clearButton" class="clea1" type="button" value="清除路线" onclick="mapClear();startClear()" style="float: left">
+
+    <div id="container" tabindex="0"></div>
+    <!--打开-->
+    <button onclick="openNav()">切换</button>
+
+    <!--3d地图-->
+    <div id="3d_map" class="sidenav">
+        <iframe id="ifr" src="http://127.0.0.1:9000"></iframe>
+        <button class="closebtn" onclick="closeNav()">切换</button>
+    </div>
+    <!--输入-->
+    <div class="body_input">
+        <div id="r-result" class="soso">
+            <input type="text" id="start" size="40" placeholder="起始地点...">
+            <input class="button" type="submit" value="搜索" onclick="setPlace()">
+        </div><br>
+
+        <div id="new">
+            <div>
+                <div style="float: left">目标地点：</div>
+                <select id="final" style="float:left; font-size: 13px; padding: 2px">
+                    <option value="西安电子科技大学南校区-教学楼B楼">西安电子科技大学南校区-教学楼B楼</option>
+                    <option value="西安电子科技大学南校区-教学楼C楼">西安电子科技大学南校区-教学楼C楼</option>
+                    <option value="西安电子科技大学南校区-教学楼D楼">西安电子科技大学南校区-教学楼D楼</option>
+                    <option value="西安电子科技大学南校区-教学楼E楼">西安电子科技大学南校区-教学楼E楼</option>
+                    <option value="西安电子科技大学南校区-教学楼F楼">西安电子科技大学南校区-教学楼F楼</option>
+                    <option value="西安电子科技大学南校区-教学楼G楼">西安电子科技大学南校区-教学楼G楼</option>
+                </select>
+                <select id="rom_num" style="float:left; font-size: 13px; padding: 2px">
+                    <option>101</option><option>105</option><option>106</option><option>107</option><option>201</option><option>202</option>
+                    <option>203</option><option>206</option><option>207</option><option>208</option><option>211</option><option>215</option>
+                    <option>216</option><option>217</option><option>301</option><option>303</option><option>306</option><option>307</option>
+                    <option>308</option><option>311</option><option>312</option><option>314</option><option>315</option><option>316</option>
+                    <option>318</option><option>320</option><option>401</option><option>403</option><option>406</option><option>407</option>
+                    <option>408</option><option>411</option><option>412</option><option>414</option><option>415</option><option>416</option>
+                    <option>418</option><option>419</option><option>421</option><option>422</option><option>425</option><option>426</option>
+                    <option>501</option><option>502</option><option>503</option><option>506</option><option>507</option><option>509</option>
+                    <option>510</option><option>511</option><option>513</option><option>514</option><option>516</option><option>517</option>
+                    <option>520</option><option>521</option><option>601</option><option>602</option><option>603</option><option>605</option>
+                    <option>606</option><option>608</option><option>609</option><option>612</option><option>613</option><option>701</option>
+                    <option>703</option><option>706</option><option>707</option>
+                </select>
+            </div>
+            <div id="searchResultPanel" class="soso" style="border:1px solid #C0C0C0; width:150px; height:auto; display: none;"></div>
+        </div>
+
+    </div>
+</body>
+
+    <script src="../scripts/xidian_al.js"></script>
+    <script src="../scripts/jquery-editable-select.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            $("option").click(function(){
+                $("#rom_num").removeAttr("size");
+                $("#rom_num").blur();
+                this.attr("selected","");
+            });
+            $("#rom_num").focus(function(){
+                $("#rom_num").attr("size","5");
+            })
+        };
+    </script>
+
+</html>

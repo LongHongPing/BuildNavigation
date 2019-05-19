@@ -1,0 +1,154 @@
+body,html,#container{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+#ifr{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+button,.clea1{
+    position: absolute;
+    top:40%;
+    right: 0;
+    z-index: 2;
+    display: inline-block;
+    margin: 0;
+    padding: 8px 15px;
+    font-size: 5px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+    white-space: nowrap;
+    background-color: #eaeaea;
+    background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+    background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+    background-image: linear-gradient(#fafafa, #eaeaea);
+    background-repeat: repeat-x;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    border-bottom-color: #c5c5c5;
+    box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    vertical-align: middle;
+    cursor: pointer;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+}
+
+button:hover,.clea1:hover{ background-position: 0 -15px; border-color: #ccc #ccc #b5b5b5; }
+
+.sidenav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #b1c7c0;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 37%;
+    right: 0;
+    z-index: 10;
+}
+
+.body_input{
+     width: 1000px;
+     height: 10px;
+     position: absolute;
+     top: 25px;
+     left: 25px;
+     z-index: 2;
+ }
+
+select{
+    border: 1px solid #b1c7c0;
+    border-radius: 3px;
+}
+
+#start{
+    border: 1px solid #b1c7c0;
+    border-radius: 2px 0 0 2px;
+    height: 100%;
+}
+#sousuo{
+    border: 1px solid #9cc7b8;
+    border-radius:0 2px 2px 0;
+}
+
+#new{
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+#r-result{
+    position: absolute;
+    z-index: 2;
+    /*margin: 30px auto 40px auto;*/
+    top: 50px;
+    width: 800px;
+    text-align: left;
+}
+input[type=text]{ font-size: 13px; min-height: 10px; margin: 0; padding: 7px 8px; outline: none; color: #333; background-color: #fff; background-repeat: no-repeat; background-position: right center; border: 1px solid #ccc; border-radius: 3px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.075); -moz-box-sizing: border-box; box-sizing: border-box; transition: all 0.15s ease-in; -webkit-transition: all 0.15s ease-in; vertical-align: middle; }
+
+.button { position: relative; display: inline-block; margin: 0; padding: 8px 15px; font-size: 10px; font-weight: bold; color: #333; text-shadow: 0 1px 0 rgba(255,255,255,0.9); white-space: nowrap; background-color: #eaeaea; background-image: -moz-linear-gradient(#fafafa, #eaeaea); background-image: -webkit-linear-gradient(#fafafa, #eaeaea); background-image: linear-gradient(#fafafa, #eaeaea); background-repeat: repeat-x; border-radius: 3px; border: 1px solid #ddd; border-bottom-color: #c5c5c5; box-shadow: 0 1px 3px rgba(0,0,0,.05); vertical-align: middle; cursor: pointer; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-appearance: none; }
+
+.button:hover,  .button:active { background-position: 0 -15px; border-color: #ccc #ccc #b5b5b5; }
+
+.button:active { background-color: #dadada; border-color: #b5b5b5; background-image: none; box-shadow: inset 0 3px 5px rgba(0,0,0,.15); }
+
+.button:focus,  input[type=text]:focus,  input[type=password]:focus { outline: none; border-color: #51a7e8; box-shadow: inset 0 1px 2px rgba(0,0,0,.075), 0 0 5px rgba(81,167,232,.5); }
+
+#r-result input[type=text] { font-size: 13px; padding: 4px; width: 300px; border-radius: 3px}
+
+#r-result .button { padding: 3px; width: 50px;  font-size: 15px;}
+
+#rom_num{
+    position: absolute;
+    z-index: 2;
+}
+
+#mous{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 1;
+}
+
+#clearButton{
+    font-size: 12px;
+    position: absolute;
+    padding: 3px;
+    top: 10px;
+    left: 130px;
+    z-index: 1;
+    border: 1px solid #ced2ca;
+    border-radius: 3px;
+}

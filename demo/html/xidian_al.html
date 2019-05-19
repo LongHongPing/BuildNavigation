@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/xidian_al.css">
+
+    <script src="../scripts/xidian_al.js"></script>
+    <title>西电AL</title>
+</head>
+<body>
+    <!-- 地图容器-->
+    <div id="container" tabindex="0"></div>
+    <!--打开-->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">打开</span>
+    <!--3d地图-->
+
+    <div id="3d_map" class="sidenav">
+        <iframe id="ifr" src="http://127.0.0.1:9000"></iframe>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">返回 &times;</a>
+    </div>
+
+    <!-- 地图scripts-->
+    <script type="text/javascript">
+        window.init = function(){
+            var map = new AMap.Map('container', {
+                resizeEnable: true,
+                center:[108.840233,34.126833],
+                zoom:17
+            });
+            if (location.href.indexOf('guide=1') !== -1) {
+                map.setStatus({scrollWheel: false});
+                map.plugin(["AMap.ToolBar"], function() {
+                    map.addControl(new AMap.ToolBar({liteStyle:true}))
+                });
+            }
+        }
+     </script>
+    <script src="https://webapi.amap.com/maps?v=1.4.14&key=dd05089fa33609960ceb8f24f68512c0&callback=init"></script>
+<!--    3d地图script-->
+
+</body>
+</html>

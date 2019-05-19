@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>西电导航</title>
+    <link rel="stylesheet" type="text/css" href="../css/xidian.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Ws2Emitc5glP21nc2h3D5nh1R4U7Z7cp"></script>
+</head>
+<body>
+    <div id="search" >搜索</div>
+    <div id="r-result"></div>
+
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 打开</span>
+
+
+    <div id="allmap"></div>
+<!--        <div id="logo">-->
+<!--            <ul>-->
+<!--                <li><a href="#home" style="padding: 0"><img src="../image/4.jpg" alt="logo" id="logo_image"></a></li>-->
+<!--                <li><a class="active" href="#home">主页</a></li>-->
+<!--                <li><a href="">新闻</a></li>-->
+<!--                <li><a href="">联系</a></li>-->
+<!--                <li><a href="">关于</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+    <div id="3d_map" class="sidenav">
+        <h1 style="align-content: center">3d图片</h1>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">返回 &times;</a>
+    </div>
+
+    <script src="../scripts/xidian.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(108.840053,34.129522), 16);  // 初始化地图,设置中心点坐标和地图级别
+    //添加地图类型控件
+    map.addControl(new BMap.MapTypeControl({
+        mapTypes:[
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]}));
+    var local = new BMap.LocalSearch(map, {
+        renderOptions:{map: map}
+    });
+    local.search("竹园2号宿舍楼");
+    // map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    // 显示导航路径
+    function navigate(){
+        var start = "竹园2号宿舍楼"
+        var final = "b楼"
+        if((start=="" && start==undefined) || (final=="" && start==undefined)){
+            alert("起始地点或目标地点输入为空！");
+            return false;
+        }
+        // alert(start);   // 测试用，请删除这行
+        var walking = new BMap.WalkingRoute(map, {renderOptions:{map: map, panel: "r-result", autoViewport: true}});
+        walking.search(start, final);
+    }
+    navigate();
+</script>

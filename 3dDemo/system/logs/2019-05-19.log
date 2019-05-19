@@ -1,0 +1,41 @@
+2019-05-19 13:57:37.661 [main] INFO  org.springframework.boot.StartupInfoLogger.logStarting - Starting Application v0.0.1-SNAPSHOT on DESKTOP-CHK3U9F with PID 15944 (started by yxcy2 in A:\桌面\test2\offline (3))
+2019-05-19 13:57:37.665 [main] INFO  org.springframework.boot.SpringApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2019-05-19 13:57:38.034 [background-preinit] INFO  org.hibernate.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 0.0.1-SNAPSHOT
+2019-05-19 13:57:42.558 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting service [Tomcat]
+2019-05-19 13:57:42.560 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-05-19 13:57:42.657 [localhost-startStop-1] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing Spring embedded WebApplicationContext
+2019-05-19 13:57:43.479 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing ProtocolHandler ["http-nio-9000"]
+2019-05-19 13:57:43.490 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting ProtocolHandler ["http-nio-9000"]
+2019-05-19 13:57:43.506 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Using a shared selector for servlet write/read
+2019-05-19 13:57:43.642 [main] INFO  org.springframework.boot.StartupInfoLogger.logStarted - Started Application in 6.261 seconds (JVM running for 6.87)
+2019-05-19 13:57:43.643 [main] INFO  com.Application.main - Start successfully
+2019-05-19 13:57:43.644 [main] INFO  com.Application.main - Service start on port 9000 修改conf/application.properties文件，改变端口等设置
+2019-05-19 13:57:55.405 [http-nio-9000-exec-1] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-05-19 13:57:55.449 [http-nio-9000-exec-1] ERROR com.common.util.AuthUtil.checkAuth - no license
+2019-05-19 13:58:28.057 [http-nio-9000-exec-3] ERROR com.common.util.AuthUtil.checkAuth - no license
+2019-05-19 15:24:19.653 [main] INFO  org.springframework.boot.StartupInfoLogger.logStarting - Starting Application v0.0.1-SNAPSHOT on little_rain with PID 10912 (started by dell in E:\dell\桌面\3dDemo)
+2019-05-19 15:24:19.669 [main] INFO  org.springframework.boot.SpringApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2019-05-19 15:24:20.122 [background-preinit] INFO  org.hibernate.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 0.0.1-SNAPSHOT
+2019-05-19 15:24:23.527 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting service [Tomcat]
+2019-05-19 15:24:23.527 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-05-19 15:24:23.606 [localhost-startStop-1] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing Spring embedded WebApplicationContext
+2019-05-19 15:24:24.402 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing ProtocolHandler ["http-nio-9000"]
+2019-05-19 15:24:24.418 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting ProtocolHandler ["http-nio-9000"]
+2019-05-19 15:24:24.418 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Using a shared selector for servlet write/read
+2019-05-19 15:24:24.527 [main] INFO  org.springframework.boot.StartupInfoLogger.logStarted - Started Application in 5.202 seconds (JVM running for 5.828)
+2019-05-19 15:24:24.527 [main] INFO  com.Application.main - Start successfully
+2019-05-19 15:24:24.527 [main] INFO  com.Application.main - Service start on port 9000 修改conf/application.properties文件，改变端口等设置
+2019-05-19 15:24:51.442 [http-nio-9000-exec-2] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-05-19 21:20:46.991 [main] INFO  org.springframework.boot.StartupInfoLogger.logStarting - Starting Application v0.0.1-SNAPSHOT on little_rain with PID 10044 (started by dell in E:\dell\桌面\3dDemo)
+2019-05-19 21:20:47.036 [main] INFO  org.springframework.boot.SpringApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2019-05-19 21:20:48.981 [background-preinit] INFO  org.hibernate.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 0.0.1-SNAPSHOT
+2019-05-19 21:20:54.390 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting service [Tomcat]
+2019-05-19 21:20:54.414 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-05-19 21:20:54.839 [localhost-startStop-1] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing Spring embedded WebApplicationContext
+2019-05-19 21:20:56.070 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing ProtocolHandler ["http-nio-9000"]
+2019-05-19 21:20:56.157 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting ProtocolHandler ["http-nio-9000"]
+2019-05-19 21:20:56.236 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Using a shared selector for servlet write/read
+2019-05-19 21:20:56.448 [main] INFO  org.springframework.boot.StartupInfoLogger.logStarted - Started Application in 11.115 seconds (JVM running for 16.041)
+2019-05-19 21:20:56.449 [main] INFO  com.Application.main - Start successfully
+2019-05-19 21:20:56.450 [main] INFO  com.Application.main - Service start on port 9000 修改conf/application.properties文件，改变端口等设置
+2019-05-19 21:21:10.319 [http-nio-9000-exec-1] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing Spring FrameworkServlet 'dispatcherServlet'

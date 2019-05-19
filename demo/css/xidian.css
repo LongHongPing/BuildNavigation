@@ -1,0 +1,95 @@
+/*logo*/
+/*ul {*/
+/*    list-style-type: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    overflow: hidden;*/
+/*    background-color: #333;*/
+/*}*/
+
+/*li {*/
+/*    float: left;*/
+/*}*/
+
+/*li a {*/
+/*    display: block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*li a:hover {*/
+/*    background-color: #111;*/
+/*}*/
+
+/*#logo_image{*/
+/*    width: 60px;*/
+/*    height: 45px;*/
+/*}*/
+
+/*plan_map*/
+html, body {
+    margin:0;
+    padding:0;
+}
+
+span{
+    border: 0 solid;
+    border-radius: 30px 0 0 30px;
+    position: absolute;
+    top:50%;
+    right: 0;
+    z-index: 1;
+    background-color: #c9e8ff;
+}
+.sidenav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#search{
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    top:10px;
+}
+#allmap {
+    width: 100%;
+    height:50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    margin:0;
+}
+#r-result,#r-result table{
+    width:300px;
+}
