@@ -13,75 +13,69 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-311344283">
+    <session id="-940081902">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="js" value="23" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JavaScript" value="23" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1669543097">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.25" value="1" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
+      <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="12" />
+          <entry key="css" value="1" />
+          <entry key="js" value="1" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
+      <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="12" />
+          <entry key="CSS" value="1" />
+          <entry key="JavaScript" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/xidian_dl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="3570">
+              <caret line="128" column="31" selection-start-line="128" selection-start-column="31" selection-end-line="128" selection-end-column="31" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#script#2;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/xidian_al.css">
+        <entry file="file://$PROJECT_DIR$/css/mous/jquery-labelauty.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4590">
-              <caret line="153" selection-start-line="153" selection-end-line="153" />
+            <state relative-caret-position="720">
+              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/xidian_al.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="110" column="14" lean-forward="true" selection-start-line="110" selection-start-column="14" selection-end-line="110" selection-end-column="14" />
+            <state relative-caret-position="-1740">
+              <caret line="83" column="51" lean-forward="true" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -92,16 +86,24 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>result</find>
+      <find>#mous</find>
+      <find>start</find>
+      <find>clear</find>
+      <find>font</find>
+      <find>mous</find>
+    </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/About_Us.html" />
-        <option value="$PROJECT_DIR$/css/index.entry.4d72db82b470083c473d4778f31c9cd6.css" />
         <option value="$PROJECT_DIR$/test1.html" />
         <option value="$PROJECT_DIR$/1CreateTable.html" />
         <option value="$PROJECT_DIR$/2CreateTable.html" />
@@ -148,8 +150,10 @@
         <option value="$PROJECT_DIR$/style(2).css" />
         <option value="$PROJECT_DIR$/index(2).html" />
         <option value="$PROJECT_DIR$/html/test1.html" />
-        <option value="$PROJECT_DIR$/html/xidian_dl.html" />
+        <option value="$PROJECT_DIR$/html/test.html" />
         <option value="$PROJECT_DIR$/css/xidian_al.css" />
+        <option value="$PROJECT_DIR$/html/xidian_dl.html" />
+        <option value="$PROJECT_DIR$/css/mous/jquery-labelauty.css" />
         <option value="$PROJECT_DIR$/scripts/xidian_al.js" />
       </list>
     </option>
@@ -166,11 +170,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="295" />
-    <option name="y" value="20" />
-    <option name="width" value="1205" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -192,7 +195,8 @@
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="mous" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -211,7 +215,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../navigation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -219,19 +223,19 @@
     <property name="settings.editor.selected.configurable" value="xslt.associations" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\17102\IdeaProjects\demo" />
-      <recent name="C:\Users\17102\IdeaProjects\demo\css" />
-      <recent name="C:\Users\17102\IdeaProjects\demo\scripts" />
-      <recent name="C:\Users\17102\IdeaProjects\demo\html" />
-      <recent name="C:\Users\17102\IdeaProjects\demo\image" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\17102\IdeaProjects\demo\scripts" />
       <recent name="C:\Users\17102\IdeaProjects\demo" />
       <recent name="C:\Users\17102\IdeaProjects\demo\css" />
       <recent name="C:\Users\17102\IdeaProjects\demo\html" />
       <recent name="C:\Users\17102\IdeaProjects\demo\image" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\17102\IdeaProjects\西电导航\image" />
+      <recent name="C:\Users\17102\IdeaProjects\demo" />
+      <recent name="C:\Users\17102\IdeaProjects\demo\css" />
+      <recent name="C:\Users\17102\IdeaProjects\demo\scripts" />
+      <recent name="C:\Users\17102\IdeaProjects\demo\html" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -288,15 +292,20 @@
       <workItem from="1557967856673" duration="3759000" />
       <workItem from="1558008649193" duration="6808000" />
       <workItem from="1558052314518" duration="19369000" />
-      <workItem from="1558149594862" duration="45897000" />
-      <workItem from="1558245638352" duration="2684000" />
-      <workItem from="1558250058757" duration="1695000" />
-      <workItem from="1558272418146" duration="237000" />
+      <workItem from="1558149594862" duration="46670000" />
+      <workItem from="1559088302416" duration="332000" />
+      <workItem from="1560132641452" duration="342000" />
+      <workItem from="1560154049428" duration="977000" />
+      <workItem from="1560155302456" duration="19990000" />
+      <workItem from="1560214044704" duration="9955000" />
+      <workItem from="1560240403553" duration="9133000" />
+      <workItem from="1560250371035" duration="2120000" />
+      <workItem from="1560274546657" duration="1969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157281000" />
+    <option name="totallyTimeSpent" value="198256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -308,10 +317,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19500674" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12010796" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -319,7 +328,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -342,7 +351,7 @@
       <window_info anchor="right" id="Maven Projects" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18498659" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15808298" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -350,15 +359,15 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.145686" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.145686" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -370,6 +379,7 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,17 +398,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/index.entry.4d72db82b470083c473d4778f31c9cd6.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="57" lean-forward="true" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/heizi.html" />
-    <entry file="file://$PROJECT_DIR$/html/1CreateAudio.html" />
-    <entry file="file://$PROJECT_DIR$/scripts/main.js" />
-    <entry file="file://$PROJECT_DIR$/html/hand.html" />
     <entry file="file://$PROJECT_DIR$/html/flower.html" />
     <entry file="file://$PROJECT_DIR$/html/cssAnimation.html" />
     <entry file="file://$PROJECT_DIR$/html/1CreateVideo.html" />
@@ -419,12 +418,10 @@
     <entry file="file://$PROJECT_DIR$/html/2img.html" />
     <entry file="file://$PROJECT_DIR$/image/butterflywings.png" />
     <entry file="file://$PROJECT_DIR$/image/3.jpg" />
-    <entry file="file://$PROJECT_DIR$/image/1.jpg" />
     <entry file="file://$PROJECT_DIR$/image/2.jpg" />
     <entry file="file://$PROJECT_DIR$/image/4.jpg" />
     <entry file="file://$PROJECT_DIR$/html/example.html" />
     <entry file="file://$PROJECT_DIR$/html/style.css" />
-    <entry file="file://$PROJECT_DIR$/css/main.css" />
     <entry file="file://$PROJECT_DIR$/scripts/xidian.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -439,22 +436,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/xidian.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="91" column="1" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html" />
     <entry file="file://$PROJECT_DIR$/css/style(1).css" />
-    <entry file="file://$PROJECT_DIR$/html/xidian_al.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/index(1).html" />
     <entry file="file://$PROJECT_DIR$/scripts/three.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -468,37 +451,80 @@
     <entry file="file://$PROJECT_DIR$/scripts/jquery-editable-select.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/jquery-editable-select.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/css/jquery-editable-select.css" />
     <entry file="file://$PROJECT_DIR$/html/index1.html" />
     <entry file="file://$PROJECT_DIR$/html/lslib.html" />
     <entry file="file://$PROJECT_DIR$/style(2).css" />
     <entry file="file://$PROJECT_DIR$/index(2).html" />
     <entry file="file://$PROJECT_DIR$/html/test1.html" />
-    <entry file="file://$PROJECT_DIR$/css/xidian_al.css">
+    <entry file="file://$PROJECT_DIR$/css/main.css" />
+    <entry file="file://$PROJECT_DIR$/image/1.jpg" />
+    <entry file="file://$PROJECT_DIR$/scripts/main.js" />
+    <entry file="file://$PROJECT_DIR$/image/transfer.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/xidian.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4590">
-          <caret line="153" selection-start-line="153" selection-end-line="153" />
+        <state relative-caret-position="-69" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/mouseClick.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="16" column="99" selection-start-line="16" selection-start-column="99" selection-end-line="16" selection-end-column="99" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/xidian_al.js">
+    <entry file="file://$PROJECT_DIR$/html/xidian_al.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="110" column="14" lean-forward="true" selection-start-line="110" selection-start-column="14" selection-end-line="110" selection-end-column="14" />
+        <state relative-caret-position="600">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/xidian_al.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1830">
+          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/xidian_dl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state relative-caret-position="3570">
+          <caret line="128" column="31" selection-start-line="128" selection-start-column="31" selection-end-line="128" selection-end-column="31" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#script#2;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/mous/jquery-labelauty.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/xidian_al.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1740">
+          <caret line="83" column="51" lean-forward="true" selection-start-line="83" selection-start-column="51" selection-end-line="83" selection-end-column="51" />
         </state>
       </provider>
     </entry>

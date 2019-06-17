@@ -1,0 +1,18 @@
+2019-06-11 08:42:06.654 [main] INFO  org.springframework.boot.StartupInfoLogger.logStarting - Starting Application v0.0.1-SNAPSHOT on little_rain with PID 4824 (started by dell in E:\dell\桌面\BuildNavigation\3dDemo)
+2019-06-11 08:42:06.660 [main] INFO  org.springframework.boot.SpringApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2019-06-11 08:42:09.079 [background-preinit] INFO  org.hibernate.validator.internal.util.Version.<clinit> - HV000001: Hibernate Validator 0.0.1-SNAPSHOT
+2019-06-11 08:42:17.471 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting service [Tomcat]
+2019-06-11 08:42:17.492 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting Servlet Engine: Apache Tomcat/8.5.16
+2019-06-11 08:42:18.115 [localhost-startStop-1] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing Spring embedded WebApplicationContext
+2019-06-11 08:42:19.747 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing ProtocolHandler ["http-nio-9000"]
+2019-06-11 08:42:19.972 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Starting ProtocolHandler ["http-nio-9000"]
+2019-06-11 08:42:20.132 [main] INFO  org.apache.juli.logging.DirectJDKLog.log - Using a shared selector for servlet write/read
+2019-06-11 08:42:20.380 [main] INFO  org.springframework.boot.StartupInfoLogger.logStarted - Started Application in 15.794 seconds (JVM running for 21.875)
+2019-06-11 08:42:20.381 [main] INFO  com.Application.main - Start successfully
+2019-06-11 08:42:20.382 [main] INFO  com.Application.main - Service start on port 9000 修改conf/application.properties文件，改变端口等设置
+2019-06-11 08:50:27.649 [http-nio-9000-exec-1] INFO  org.apache.juli.logging.DirectJDKLog.log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-11 08:50:30.067 [http-nio-9000-exec-1] ERROR com.common.util.AuthUtil.checkAuth - 授权已过期
+2019-06-11 08:50:45.705 [http-nio-9000-exec-5] ERROR com.common.util.AuthUtil.checkAuth - 授权已过期
+2019-06-11 08:51:29.695 [http-nio-9000-exec-13] ERROR com.common.util.AuthUtil.checkAuth - 授权已过期
+2019-06-11 08:51:48.457 [http-nio-9000-exec-14] ERROR com.common.util.AuthUtil.checkAuth - 授权已过期
+2019-06-11 08:52:04.071 [http-nio-9000-exec-11] ERROR com.common.util.AuthUtil.checkAuth - 授权已过期

@@ -1,3 +1,7 @@
+/**
+ * Author:   hplong
+ * Description: 测试教室间导航
+ */
 package work.bg.navigation;
 
 import org.junit.Test;
@@ -11,15 +15,16 @@ import java.util.Vector;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class NavigationApplicationTests {
+public class NavigationClassroomTests {
     @Test
     public static void main(String[] args){
         NavigationImpl navigation = new NavigationImpl();
-        navigation.init(3,101);
-        Vector<String> vec = navigation.transfer(navigation.getJump(),navigation.getTurn());
+        navigation.initClassroom(320,601);
+        Vector<String> vec = navigation.transferClassroom(navigation.getJump(),navigation.getTurn());
         Iterator iterator = vec.iterator();
         while(iterator.hasNext()){
             System.out.println(iterator.next());
         }
     }
 }
+

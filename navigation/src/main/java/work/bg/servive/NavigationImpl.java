@@ -20,6 +20,9 @@ public class NavigationImpl implements Navigation{
     private int[] jump = new int[4];       //记上几层
     private int[] turn = new int[6];       //记转向
 
+    private int origin;             //起始教室
+    private int destination;        //终点教室
+
     private Vector<String> vector = new Vector<>();                    //结果集
     private HashMap<Integer,Integer> stairMap = new HashMap<>();       //楼梯/位置映射，位置-楼梯
     private HashMap<Integer,Integer> roomMap = new HashMap<>();     //教室/位置映射，教室-位置
@@ -53,14 +56,14 @@ public class NavigationImpl implements Navigation{
     @Override
     public void navigation(Stair stair, int roomPosition){
         int floor = roomPosition/100;        //目标教室所在楼层
-        sta = findStair();   //目标教室对应楼梯
+        sta = findStair(roomPosition,stair);   //目标教室对应楼梯
         //起始楼梯和目标楼梯相同
         int i = 0;      //记录有几组数据
         int j = 0;
         if(sta.getId() == stair.getId()){
             jump[i++] = floor-stair.getStart();
             //记左/右走,负为左，正为右
-            int room = findRoom();
+            int room = findRoom(roomPosition);
             if(room < 0){
                 if(roomPosition == 401|| roomPosition == 301 || roomPosition == 201 || roomPosition == 101){
                     turn[j++] = -2;
@@ -92,7 +95,7 @@ public class NavigationImpl implements Navigation{
                 }else{
                     index = sta.getRoom().length-1-(floor-stair.getEnd());
                 }
-                if(index == 3 && sta.getId() > 6){
+                if(index == 3 && sta.getId() > 9){
                     index--;
                 }
                 int positon = findStaRoom(sta.getRoom(index),1);
@@ -115,6 +118,7 @@ public class NavigationImpl implements Navigation{
 
     @Override
     public Vector<String> transfer(int[] jump,int[] turn) {
+        vector.clear();
         //添加终点教室ID
         vector.addElement(""+roomPosition);
         //添加入口ID
@@ -126,7 +130,7 @@ public class NavigationImpl implements Navigation{
         //添加楼梯ID
         for(int i = 0;i < jump.length;i++){
             if(jump[i] == 0){
-                break;
+                continue;
             }
             if(i == 0){
                 for(int j = 1;j <= jump[i];j++){
@@ -146,7 +150,7 @@ public class NavigationImpl implements Navigation{
         //添加板子ID
         for(int i = 0;i < turn.length;i++){
             if(turn[i] == 0){
-                break;
+                continue;
             }
             if(Math.abs(turn[i]) == 1){
                 vector.addElement("b"+roomPosition);
@@ -158,6 +162,179 @@ public class NavigationImpl implements Navigation{
                 findBoard(Math.abs(pos),vector,turn[i]);
             }else{
                 int[] room = sta.getRoom(roomPosition/100-sta.getStart());
+                int pos = findStaRoom(room,dir);
+                findBoard(Math.abs(pos),vector,turn[i]);
+            }
+        }
+        return vector;
+    }
+
+    @Override
+    public void initClassroom(int roomFrom,int roomTo) {
+        //初始化获取参数
+        initRoom();
+        origin = roomMap.get(roomFrom);
+        destination = roomMap.get(roomTo);
+//        System.out.println(origin+" "+destination);
+//        initDoor();
+//        initDoorStair();
+        initStair();
+        naviClassroom(origin,destination);
+    }
+    @Override
+    public void naviClassroom(int origin,int destination){
+        int floorFrom = origin/100;        //起始教室所在楼层
+        int floorTo = destination/100;      //目标教室所在楼层
+        if(floorFrom > floorTo){        //从上到下,反向
+            int tempRoom = origin;
+            origin = destination;
+            destination = tempRoom;
+            int tempFloor = floorFrom;
+            floorFrom = floorTo;
+            floorTo = tempFloor;
+        }
+        Stair stairFrom = null,stairTo = null;
+        if(origin == 105){
+            stairFrom = s[1];
+        }else if(destination == 105){
+            stairTo  = s[1];
+        }else if(origin == 313){
+            stairFrom = s[9];
+        }else if(destination == 313){
+            stairTo = s[9];
+        }else{
+            stairFrom = findStair(origin,stair);   //起始教室对应楼梯
+            stairTo = findStair(destination,stairFrom);
+        }
+//        Stair stairFrom = findStair(origin,stair);   //起始教室对应楼梯
+//        Stair stairTo = findStair(destination,stairFrom);   //目标教室对应楼梯
+        //起始楼梯和目标楼梯相同
+        int i = 0;      //记录有几组数据
+        int j = 0;
+        if(stairFrom.getId() == stairTo.getId()){
+            jump[i++] = floorTo-floorFrom;
+            //记左/右走,负为左，正为右
+            int room = findRoom(destination);
+            if(room < 0){
+                if(destination == 401|| destination == 301 || destination == 201 || destination == 101){
+                    turn[j++] = -2;
+                }else{
+                    turn[j++] = -1;
+                }
+            }else{
+                turn[j++] = 1;
+            }
+        }else if(stairTo.getId() > stairFrom.getId()){      //目标楼梯在起始楼梯右边
+            if(floorTo <= stairFrom.getEnd()){     //可以从起始楼梯直达目标教室所在层
+                int jumpTemp = floorTo-floorFrom;
+                jump[i++] = jumpTemp;
+                int near = findStaRoom(stairFrom.getRoom(floorTo-stairFrom.getStart()),1);
+                if(near > 0){
+                    turn[j++] = destination-near+1;
+                }else{
+                    turn[j++] = destination-near;
+                }
+            }else{                                          //不可以直达所在层
+                int jumpTemp = stairFrom.getEnd()-floorFrom;      //上到当前楼梯最高可达
+                jump[i++] = jumpTemp;
+                int near = findStaRoom(stairFrom.getRoom(stairFrom.getEnd()-stairFrom.getStart()),1);
+                jumpTemp = floorTo-stairFrom.getEnd();
+                jump[i++] =jumpTemp;
+
+//                int index = 0;
+//                if(stairTo.getId() == 2 || stairTo.getId() == 7 || stairTo.getId() >= 10){
+//                    index = stairTo.getRoom().length-2-(floorTo-stairTo.getEnd());
+//                }else{
+//                    index = stairTo.getRoom().length-1-(floorTo-stairTo.getEnd());
+//                }
+//                if(index == 3 && stairTo.getId() > 8){
+//                    index--;
+//                }
+                int index = stairFrom.getEnd()-stairTo.getStart();
+                int position = findStaRoom(stairTo.getRoom(index),1);
+                turn[j++] = position-near;
+                turn[j++] = 1;
+            }
+        }else{                          //目标楼梯在起始楼梯左边
+            if(floorTo <= stairFrom.getEnd()){     //肯定可以从起始楼梯直达目标教室所在层
+                int jumpTemp = floorTo-floorFrom;
+                jump[i++] = jumpTemp;
+                int near = findStaRoom(stairFrom.getRoom(floorTo-stairFrom.getStart()),-1);
+                if(near > 0){
+                    turn[j++] = destination-near;
+                }else{
+                    turn[j++] = destination-Math.abs(near)-1;
+                }
+            }
+        }
+    }
+
+    @Override
+    public Vector<String> transferClassroom(int[] jump,int[] turn) {
+        vector.clear();
+        //添加教室ID
+        vector.addElement(""+destination);
+        vector.addElement(""+origin);
+        int floorFrom = origin/100;        //起始教室所在楼层
+        int floorTo = destination/100;      //目标教室所在楼层
+        if(floorFrom > floorTo){        //从上到下,反向
+            int tempRoom = origin;
+            origin = destination;
+            destination = tempRoom;
+            int tempFloor = floorFrom;
+            floorFrom = floorTo;
+            floorTo = tempFloor;
+        }
+        Stair stairFrom = findStair(origin,stair);   //起始教室对应楼梯
+        Stair stairTo = findStair(destination,stairFrom);   //目标教室对应楼梯
+        int stairID = stairFrom.getId();
+        int positID = stairTo.getId();
+        int dir = positID-stairID;
+        //添加楼梯ID
+        for(int i = 0;i < jump.length;i++){
+            if(jump[i] == 0){
+                continue;
+            }
+            if(i == 0){
+                int index = floorFrom-stairFrom.getStart()+1;
+                for(int j = 0;j < jump[i];j++,index++){
+                    vector.addElement("s"+stairID+index);
+                }
+            }else{
+                int index = floorTo-floorFrom;
+                for(int j = 0;j < jump[i];j++){
+                    if(positID == 12){
+                        positID--;
+                    }
+                    vector.addElement("s"+positID+index);
+                    index--;
+                }
+            }
+        }
+        //添加板子ID
+        for(int i = 0;i < turn.length;i++){
+            if(turn[i] == 0){
+                continue;
+            }
+            if(Math.abs(turn[i]) == 1){
+                vector.addElement("b"+destination);
+                continue;
+            }
+            if(i == 0){
+                if(stairFrom.getEnd() < floorTo){
+                    int[] room = stairFrom.getRoom(stairFrom.getRoom().length-1);
+                    if(stairFrom.getId() == 2 || stairFrom.getId() == 7){
+                        room = stairFrom.getRoom(stairFrom.getRoom().length-2);
+                    }
+                    int pos = findStaRoom(room,dir);
+                    findBoard(Math.abs(pos),vector,turn[i]);
+                }else{
+                    int[] room = stairFrom.getRoom(floorTo-stairFrom.getStart());
+                    int pos = findStaRoom(room,dir);
+                    findBoard(Math.abs(pos),vector,turn[i]);
+                }
+            }else{
+                int[] room = stairFrom.getRoom(destination/100-stairTo.getStart());
                 int pos = findStaRoom(room,dir);
                 findBoard(Math.abs(pos),vector,turn[i]);
             }
@@ -246,10 +423,10 @@ public class NavigationImpl implements Navigation{
     }
     //初始化门和方位关系
     private void initDoor() {
-            doorMap.put(0,2);
-            doorMap.put(1,4);
-            doorMap.put(2,0);
-            doorMap.put(3,2);
+        doorMap.put(0,2);
+        doorMap.put(1,4);
+        doorMap.put(2,0);
+        doorMap.put(3,2);
     }
     //初始化教室和其位置关系
     private void initRoom(){
@@ -279,7 +456,7 @@ public class NavigationImpl implements Navigation{
         roomMap.put(315,309);
         roomMap.put(316,310);
         roomMap.put(318,311);
-        roomMap.put(320,312);
+        roomMap.put(320,313);
 
         roomMap.put(401,401);
         roomMap.put(403,402);
@@ -348,7 +525,13 @@ public class NavigationImpl implements Navigation{
         }
     }
     //确定目标教室对应楼梯
-    private Stair findStair() {
+    private Stair findStair(int roomPosition,Stair stair) {
+        if(roomPosition == 313){
+            return s[9];
+        }
+        if(roomPosition == 105){
+            return s[0];
+        }
         //只在楼梯右边
         if(roomPosition == 103 || roomPosition == 203 || roomPosition == 303 || roomPosition == 403
                 || roomPosition == 502 || roomPosition == 701 || roomPosition == 606
@@ -373,7 +556,7 @@ public class NavigationImpl implements Navigation{
         return s[poStairID];
     }
     //确定楼梯有没有要的教室
-    private int findRoom() {
+    private int findRoom(int roomPosition) {
         //只在楼梯左边的
         if(roomPosition == 702 || roomPosition == 607 || roomPosition == 512 || roomPosition == 413
                 || roomPosition == 101 || roomPosition == 102 || roomPosition == 201 || roomPosition == 202
@@ -431,4 +614,3 @@ public class NavigationImpl implements Navigation{
         }
     }
 }
-

@@ -1,10 +1,10 @@
 //打开侧页
 function openNav() {
-    document.getElementById("3d_map").style.width = "100%";
+    document.getElementById("secondaryPage").style.width = "100%";
 }
 
 function closeNav() {
-    document.getElementById("3d_map").style.width = "0";
+    document.getElementById("secondaryPage").style.width = "0";
 }
 var loc = null;
 var map;
@@ -16,7 +16,7 @@ var centerpoint = { // 地图中点-西安电子科技大学南校区 108.840053
 // 创建地图，选定起始点
 function createMap(){
     var point = new BMap.Point(centerpoint.lng, centerpoint.lat);    // 构造中点坐标点
-    map = new BMap.Map("container");    // 创建Map实例
+    map = new BMap.Map("mainPage");    // 创建Map实例
     map.centerAndZoom(point, 16);  // 初始化地图,设置中心点坐标和地图级别
     map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 }
@@ -85,7 +85,6 @@ function setPlace(){
         onSearchComplete: myFun1
     });
     local1.search(document.getElementById("final").value);
-
 }
 
 //2.清除路线
@@ -106,18 +105,17 @@ function fun(e){
     walking.search(pp, pp1);// 展示导航路径
     loc = locationB(pp.lng, pp.lat);
     path_3d();
-    //alert("lalala")
 }
 // 4.鼠标点击定位起始点
 function mouseSearch(){
     document.getElementById('start').disabled=true;
-    document.getElementById('mouse').onclick=function(){ unMouseSearch(); };
+    document.getElementById('mouseClick').onclick=function(){ unMouseSearch(); };
     map.addEventListener("click",fun);
 }
 function unMouseSearch(){
     map.clearOverlays();
     document.getElementById('start').disabled=false;
-    document.getElementById('mouse').onclick=function(){ mouseSearch(); };
+    document.getElementById('mouseClick').onclick=function(){ mouseSearch(); };
     map.removeEventListener("click",fun);
 }
 //5.确定方位
@@ -139,19 +137,37 @@ function locationB(lng, lat){
     }
 }
 
+var iframe_src = "http://www.thingjs.com/guide/sampleindex.html?m=oLX7p01o39dyc98EH3yllGUi6CYU/B_building.js?n=543";
 function path_3d() {
-    var room_number = document.getElementById("rom_num").value;
+    var room_number = document.getElementById("roomNumber").value;
     var relative_location = loc;
     $.ajax({
         type: "GET",
-        url: "http://localhost:8888/path",
+        url: "http://127.0.0.1:8888/v1/path",
         data:{
             room_number:room_number,
             relative_location:relative_location
         },
         success: function(result){
             alert(result);
-            window.frames[0].postMessage(result,'http://127.0.0.1:9000');
+            window.frames[0].postMessage(result,iframe_src);
+        }
+    });
+}
+
+function Indoor_path(){
+    var origin=document.getElementById("originClassroom").value;
+    var destination=document.getElementById("destinationClassroom").value;
+    $.ajax({
+        type: "GET",
+        url: "http://127.0.0.1:8888/v1/classroompath",
+        data:{
+            origin:origin,
+            destination:destination
+        },
+        success: function(result){
+            alert(result);
+            window.frames[0].postMessage(result,iframe_src);
         }
     });
 }

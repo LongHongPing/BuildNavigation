@@ -1,154 +1,144 @@
-body,html,#container{
-    width: 100%;
-    height: 100%;
+body,html,#mainPage{
+    width: 100%; height: 100%;
     margin: 0;
 }
-#ifr{
+
+#mainControl{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
+    z-index: 1;
+    left: 0; top: 0;
+    font-size: 15px;
+    border-style: solid; border-width: 0;
+    padding: 10px;
 }
-button,.clea1{
+
+#firstLine,#secondLine{
+    margin: 2px; padding: 5px;
+    border-style: solid; border-width: 0;
+}
+#thirdLine{
+    margin: 2px; padding: 5px;
+    border-style: solid; border-width: 0;
+}
+
+/*---------------*/
+#firstLine{
     position: absolute;
-    top:40%;
-    right: 0;
-    z-index: 2;
-    display: inline-block;
-    margin: 0;
-    padding: 8px 15px;
-    font-size: 5px;
-    font-weight: bold;
-    color: #333;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.9);
-    white-space: nowrap;
+    top: 40px;
+    left: 340px;
+}
+#secondLine{
+    position: absolute;
+    top: 10px;
+    width: 150px; /*thirdLine的图标+图标外边距+输入栏宽度*/
+}
+#thirdLine{
+    position: absolute;
+    top: 40px;
+}
+#clearButton{
+    margin: 1px 0 0 60px;
+    position: absolute;
+}
+/*---------------*/
+
+/*#mouseImage{width: 20px;height: 20px}*/
+.frame{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: #2da7ff;
+    padding: 5px;
+    font-size: 15px;
+}
+button{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2da7ff;
+    border-radius: 5px;
     background-color: #eaeaea;
-    background-image: -moz-linear-gradient(#fafafa, #eaeaea);
-    background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
-    background-image: linear-gradient(#fafafa, #eaeaea);
-    background-repeat: repeat-x;
-    border-radius: 3px;
-    border: 1px solid #ddd;
-    border-bottom-color: #c5c5c5;
-    box-shadow: 0 1px 3px rgba(0,0,0,.05);
-    vertical-align: middle;
-    cursor: pointer;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-appearance: none;
+    font-size: 15px;
+    /*padding: 1px;*/
+}
+button:hover{background-color: #dadada;}
+button:active{background-color: #b5b5b5}
+
+.transfer,.closeButton{
+    position: absolute;
+    z-index: 10;
+    top: 45%;
+    right: 0;
+    border-radius: 5px;
 }
 
-button:hover,.clea1:hover{ background-position: 0 -15px; border-color: #ccc #ccc #b5b5b5; }
 
-.sidenav {
-    height: 100vh;
-    width: 0;
+#secondaryPage{
     position: fixed;
     z-index: 20;
-    top: 0;
-    right: 0;
-    background-color: #ffffff;
+    top: 0;right: 0;
+    width: 0;height: 100vh;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
-    text-align:center;
 }
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #b1c7c0;
-    display: block;
-    transition: 0.3s;
-}
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-.sidenav .closebtn {
+#mapIframe{
     position: absolute;
-    top: 37%;
-    right: 0;
-    z-index: 10;
-}
-
-.body_input{
-     width: 1000px;
-     height: 10px;
-     position: absolute;
-     top: 25px;
-     left: 25px;
-     z-index: 2;
- }
-
-select{
-    border: 1px solid #b1c7c0;
-    border-radius: 3px;
-}
-
-#start{
-    border: 1px solid #b1c7c0;
-    border-radius: 2px 0 0 2px;
-    height: 100%;
-}
-#sousuo{
-    border: 1px solid #9cc7b8;
-    border-radius:0 2px 2px 0;
-}
-
-#new{
-    position: absolute;
+    top: 0;
     left: 0;
-    top: 20px;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+.icon{
+    width: 100px; height: 90px;
 }
 
-#r-result{
+/*************************************/
+
+#secondControl{
     position: absolute;
-    z-index: 2;
-    /*margin: 30px auto 40px auto;*/
-    top: 50px;
-    width: 800px;
-    text-align: left;
+    z-index: 10;
+    left: 0; top: 0;
+    font-size: 15px;
+    /*border-style: solid; border-width: 2px; border-color: #000000;*/
+    padding: 10px;
 }
-input[type=text]{ font-size: 13px; min-height: 10px; margin: 0; padding: 7px 8px; outline: none; color: #333; background-color: #fff; background-repeat: no-repeat; background-position: right center; border: 1px solid #ccc; border-radius: 3px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.075); -moz-box-sizing: border-box; box-sizing: border-box; transition: all 0.15s ease-in; -webkit-transition: all 0.15s ease-in; vertical-align: middle; }
 
-.button { position: relative; display: inline-block; margin: 0; padding: 8px 15px; font-size: 10px; font-weight: bold; color: #333; text-shadow: 0 1px 0 rgba(255,255,255,0.9); white-space: nowrap; background-color: #eaeaea; background-image: -moz-linear-gradient(#fafafa, #eaeaea); background-image: -webkit-linear-gradient(#fafafa, #eaeaea); background-image: linear-gradient(#fafafa, #eaeaea); background-repeat: repeat-x; border-radius: 3px; border: 1px solid #ddd; border-bottom-color: #c5c5c5; box-shadow: 0 1px 3px rgba(0,0,0,.05); vertical-align: middle; cursor: pointer; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-appearance: none; }
-
-.button:hover,  .button:active { background-position: 0 -15px; border-color: #ccc #ccc #b5b5b5; }
-
-.button:active { background-color: #dadada; border-color: #b5b5b5; background-image: none; box-shadow: inset 0 3px 5px rgba(0,0,0,.15); }
-
-.button:focus,  input[type=text]:focus,  input[type=password]:focus { outline: none; border-color: #51a7e8; box-shadow: inset 0 1px 2px rgba(0,0,0,.075), 0 0 5px rgba(81,167,232,.5); }
-
-#r-result input[type=text] { font-size: 13px; padding: 4px; width: 300px; border-radius: 3px}
-
-#r-result .button { padding: 3px; width: 50px;  font-size: 15px;}
-
-#rom_num{
+/*———输入栏美化———*/
+form {
     position: absolute;
-    z-index: 2;
+    width: 300px;
+    margin: 0 auto;  /*************************************/
+    display:inline; /*************************************/
+    box-sizing: border-box;
 }
-
-#mous{
+#thirdLine input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 42px;
+    padding-left: 10px;
+    border: 2px solid #7BA7AB;
+    border-radius: 5px;
+    outline: none;
+    background: #FFFFFF;
+    color: #9E9C9C;
+}
+#thirdLine button {
+    box-sizing: border-box;
     position: absolute;
-    top: 10px;
-    left: 20px;
-    z-index: 1;
+    top: 0;
+    right: 0px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: #7BA7AB;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
 }
-
-#clearButton{
-    font-size: 12px;
-    position: absolute;
-    padding: 3px;
-    top: 10px;
-    left: 130px;
-    z-index: 1;
-    border: 1px solid #ced2ca;
-    border-radius: 3px;
+#thirdLine button:before {
+    box-sizing: border-box;
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #ffffff;
 }
+/*———输入栏美化（以上）———*/

@@ -11,7 +11,6 @@ public class Stair {
     private int[][] room;
 
     public Stair(){
-
     }
     public Stair(int id,int start,int end){
         this.id = id;

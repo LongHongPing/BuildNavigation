@@ -3,76 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/xidian_al.css">
-    <script src="../scripts/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Ws2Emitc5glP21nc2h3D5nh1R4U7Z7cp"></script>
     <title>西电AL</title>
+    <script src="../scripts/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--  鼠标点击美化  -->
+    <link rel="stylesheet" href="../css/mous/jquery-labelauty.css">
+    <script src="../scripts/mous/jquery-1.8.3.min.js"></script>
+    <script src="../scripts/mous/jquery-labelauty.js"></script>
+
+
 </head>
 <body>
-
-    <div id="mous" style="float: left;font-size: 15px"><input id="mouse" type="checkbox" name="searchStart" onclick="mouseSearch()">鼠标点击</div>
-    <input id="clearButton" class="clea1" type="button" value="清除路线" onclick="mapClear();startClear()" style="float: left">
-
-    <div id="container" tabindex="0"></div>
-    <!--打开-->
-    <button onclick="openNav()">切换</button>
-
-    <!--3d地图-->
-    <div id="3d_map" class="sidenav">
-        <iframe id="ifr" src="http://127.0.0.1:9000"></iframe>
-        <button class="closebtn" onclick="closeNav()">切换</button>
-    </div>
-    <!--输入-->
-    <div class="body_input">
-        <div id="r-result" class="soso">
-            <input type="text" id="start" size="40" placeholder="起始地点...">
-            <input class="button" type="submit" value="搜索" onclick="setPlace()">
-        </div><br>
-
-        <div id="new">
-            <div>
-                <div style="float: left">目标地点：</div>
-                <select id="final" style="float:left; font-size: 13px; padding: 2px">
-                    <option value="西安电子科技大学南校区-教学楼B楼">西安电子科技大学南校区-教学楼B楼</option>
-                    <option value="西安电子科技大学南校区-教学楼C楼">西安电子科技大学南校区-教学楼C楼</option>
-                    <option value="西安电子科技大学南校区-教学楼D楼">西安电子科技大学南校区-教学楼D楼</option>
-                    <option value="西安电子科技大学南校区-教学楼E楼">西安电子科技大学南校区-教学楼E楼</option>
-                    <option value="西安电子科技大学南校区-教学楼F楼">西安电子科技大学南校区-教学楼F楼</option>
-                    <option value="西安电子科技大学南校区-教学楼G楼">西安电子科技大学南校区-教学楼G楼</option>
-                </select>
-                <select id="rom_num" style="float:left; font-size: 13px; padding: 2px">
-                    <option>101</option><option>105</option><option>106</option><option>107</option><option>201</option><option>202</option>
-                    <option>203</option><option>206</option><option>207</option><option>208</option><option>211</option><option>215</option>
-                    <option>216</option><option>217</option><option>301</option><option>303</option><option>306</option><option>307</option>
-                    <option>308</option><option>311</option><option>312</option><option>314</option><option>315</option><option>316</option>
-                    <option>318</option><option>320</option><option>401</option><option>403</option><option>406</option><option>407</option>
-                    <option>408</option><option>411</option><option>412</option><option>414</option><option>415</option><option>416</option>
-                    <option>418</option><option>419</option><option>421</option><option>422</option><option>425</option><option>426</option>
-                    <option>501</option><option>502</option><option>503</option><option>506</option><option>507</option><option>509</option>
-                    <option>510</option><option>511</option><option>513</option><option>514</option><option>516</option><option>517</option>
-                    <option>520</option><option>521</option><option>601</option><option>602</option><option>603</option><option>605</option>
-                    <option>606</option><option>608</option><option>609</option><option>612</option><option>613</option><option>701</option>
-                    <option>703</option><option>706</option><option>707</option>
-                </select>
+    <div id="mainControl">
+        <div id="firstLine">
+            <!--<input id="mouseClick" type="checkbox" name="searchStart" onclick="mouseSearch()">
+            <img id="mouseImage" src="../image/mouseClick.png">-->
+            <!--鼠标点击勾选-->
+            <div id="mous" style="float: left; font-size: 15px; width: 100px;">
+                <input id="mouseClick" type="checkbox" name="searchStart" data-labelauty="鼠标点击" onclick="mouseSearch()" height="100px" >
             </div>
+        </div>
+
+        <div id="secondLine">
+           <!-- 目标地点：教学楼-->
+            <img src="../image/END.png" height="19px" width="19px" style="margin: 2px 8px 0 0; float: left;"><!---------------->
+            <select id="final" class="frame" style="float: left; line-height:40px;">
+                <option value="西安电子科技大学南校区-教学楼B楼">B</option>
+                <option value="西安电子科技大学南校区-教学楼C楼">C</option>
+                <option value="西安电子科技大学南校区-教学楼D楼">D</option>
+                <option value="西安电子科技大学南校区-教学楼E楼">E</option>
+                <option value="西安电子科技大学南校区-教学楼F楼">F</option>
+                <option value="西安电子科技大学南校区-教学楼G楼">G</option>
+            </select>
+            <select id="roomNumber" class="frame" style="float: left; line-height:40px; position: absolute; z-index: 2;">
+                <option>101</option><option>105</option><option>106</option><option>107</option><option>201</option><option>202</option>
+                <option>203</option><option>206</option><option>207</option><option>208</option><option>211</option><option>215</option>
+                <option>216</option><option>217</option><option>301</option><option>303</option><option>306</option><option>307</option>
+                <option>308</option><option>311</option><option>312</option><option>314</option><option>315</option><option>316</option>
+                <option>318</option><option>320</option><option>401</option><option>403</option><option>406</option><option>407</option>
+                <option>408</option><option>411</option><option>412</option><option>414</option><option>415</option><option>416</option>
+                <option>418</option><option>419</option><option>421</option><option>422</option><option>425</option><option>426</option>
+                <option>501</option><option>502</option><option>503</option><option>506</option><option>507</option><option>509</option>
+                <option>510</option><option>511</option><option>513</option><option>514</option><option>516</option><option>517</option>
+                <option>520</option><option>521</option><option>601</option><option>602</option><option>603</option><option>605</option>
+                <option>606</option><option>608</option><option>609</option><option>612</option><option>613</option><option>701</option>
+                <option>703</option><option>706</option><option>707</option>
+            </select>
+            <input id="clearButton" class=button" type="button" value="清除路线" onclick="mapClear();startClear()" style="font-size: 20px; ">
+        </div>
+            <div id="thirdLine" class="soso">
+            <!--<input id="start" class="frame" type="text" size="40" placeholder="起始地点...">
+            <button type="button" onclick="setPlace()">search</button>-->
+                <img src="../image/START.png" height="19px" width="19px" style="margin: 11px 8px 0 0; float: left;"><!---------------->
+                <form>
+                    <input id="start"  type="text"size="40" placeholder="请输入起始地点…">
+                    <button type="button" value="搜索" onclick="setPlace()"></button>
+                </form>
             <div id="searchResultPanel" class="soso" style="border:1px solid #C0C0C0; width:150px; height:auto; display: none;"></div>
         </div>
 
     </div>
-</body>
+    <div id="mainPage"></div>
 
-    <script src="../scripts/xidian_al.js"></script>
-    <script src="../scripts/jquery-editable-select.js"></script>
-    <script type="text/javascript">
-        window.onload = function(){
-            $("option").click(function(){
-                $("#rom_num").removeAttr("size");
-                $("#rom_num").blur();
-                this.attr("selected","");
-            });
-            $("#rom_num").focus(function(){
-                $("#rom_num").attr("size","5");
-            })
-        };
+    <button class="transfer" onclick="openNav()">
+        <img class="icon" src="../image/transfer.png">
+    </button>
+
+    <div id="secondaryPage">
+        <iframe id="mapIframe" src="http://www.thingjs.com/guide/sampleindex.html?m=oLX7p01o39dyc98EH3yllGUi6CYU/B_building.js?n=543"></iframe>
+        <button class="closeButton" onclick="closeNav()">
+            <img class="icon" src="../image/transfer.png">
+        </button>
+        <div id="secondControl">
+            <img src="../image/START.png" height="19px" width="19px" style="margin:2px 0 0 4px; position: absolute; z-index: 11; float:left;"><!---------------->
+            <select id="originClassroom" class="frame" style="position: absolute; z-index: 11; left: 38px;">
+                <option>101</option><option>105</option><option>106</option><option>107</option><option>201</option><option>202</option>
+                <option>203</option><option>206</option><option>207</option><option>208</option><option>211</option><option>215</option>
+                <option>216</option><option>217</option><option>301</option><option>303</option><option>306</option><option>307</option>
+                <option>308</option><option>311</option><option>312</option><option>314</option><option>315</option><option>316</option>
+                <option>318</option><option>320</option><option>401</option><option>403</option><option>406</option><option>407</option>
+                <option>408</option><option>411</option><option>412</option><option>414</option><option>415</option><option>416</option>
+                <option>418</option><option>419</option><option>421</option><option>422</option><option>425</option><option>426</option>
+                <option>501</option><option>502</option><option>503</option><option>506</option><option>507</option><option>509</option>
+                <option>510</option><option>511</option><option>513</option><option>514</option><option>516</option><option>517</option>
+                <option>520</option><option>521</option><option>601</option><option>602</option><option>603</option><option>605</option>
+                <option>606</option><option>608</option><option>609</option><option>612</option><option>613</option><option>701</option>
+                <option>703</option><option>706</option><option>707</option>
+            </select>
+            <img src="../image/END.png" height="19px" width="19px" style="margin:2px 0 0 87px; position: absolute; z-index: 11; float:left;"><!---------------->
+            <select id="destinationClassroom" class="frame" style="position: absolute; z-index: 12; left: 118px;">
+                <option>101</option><option>105</option><option>106</option><option>107</option><option>201</option><option>202</option>
+                <option>203</option><option>206</option><option>207</option><option>208</option><option>211</option><option>215</option>
+                <option>216</option><option>217</option><option>301</option><option>303</option><option>306</option><option>307</option>
+                <option>308</option><option>311</option><option>312</option><option>314</option><option>315</option><option>316</option>
+                <option>318</option><option>320</option><option>401</option><option>403</option><option>406</option><option>407</option>
+                <option>408</option><option>411</option><option>412</option><option>414</option><option>415</option><option>416</option>
+                <option>418</option><option>419</option><option>421</option><option>422</option><option>425</option><option>426</option>
+                <option>501</option><option>502</option><option>503</option><option>506</option><option>507</option><option>509</option>
+                <option>510</option><option>511</option><option>513</option><option>514</option><option>516</option><option>517</option>
+                <option>520</option><option>521</option><option>601</option><option>602</option><option>603</option><option>605</option>
+                <option>606</option><option>608</option><option>609</option><option>612</option><option>613</option><option>701</option>
+                <option>703</option><option>706</option><option>707</option>
+            </select>
+            <!--<input class="frame" id="originClassroom" type="text" size="20" placeholder="起始教室...">
+            <input class="frame" id="destinationClassroom" style="left: 200px" type="text" size="20" placeholder="终点教室...">-->
+            <button type="button" onclick="Indoor_path()" style="position: absolute; z-index: 11; left: 181px; width:70px; font-size: 13px;" >搜索</button>
+        </div>
+    </div>
+
+    <!--    -------------修改mouseDiv------------------->
+    <script>
+        $(function(){
+            $(':input').labelauty();
+        });
     </script>
+    <!--    -------------------------------->
 
+</body>
+<script src="../scripts/jquery-editable-select.js"></script>
+<script src="../scripts/xidian_al.js"></script>
+<script type="text/javascript">
+    window.onload = function(){
+        $("option").click(function(){
+            $("#roomNumber").removeAttr("size");
+            $("#roomNumber").blur();
+            $("#originClassroom").removeAttr("size");
+            $("#originClassroom").blur();
+            $("#destinationClassroom").removeAttr("size");
+            $("#destinationClassroom").blur();
+            this.attr("selected","");
+        });
+        $("#roomNumber").focus(function(){
+            $("#roomNumber").attr("size","5");
+        })
+        $("#originClassroom").focus(function(){
+            $("#originClassroom").attr("size","5");
+        })
+        $("#destinationClassroom").focus(function(){
+            $("#destinationClassroom").attr("size","5");
+        })
+    };
+</script>
 </html>
+
+<!------------------------------>
+<div style="display:none">
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6f798e51a1cd93937ee8293eece39b1a' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5718743'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s9.cnzz.com/stat.php%3Fid%3D5718743%26show%3Dpic2' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+<script>
+    document.getElementById("mouse").addEventListener("click", mouseSearch);
+</script>
+<!------------------------------>
